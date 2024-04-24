@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo para projeto banco DimDim</title>
+</head>
+<body> 
+  <h1>Exemplo banco DimDim</h1>
+ <form id="sominha">
+    <input type="text" id="numero1"><br>
+    <input type="text" id="numero2"><br>
+    <button type="button" onclick="soma();">sominha</button>
+ </form>
+
+  <form id="formulario">
+    <label for="usuario">usuario:</label>
+    <input type="text" id="usuario" name="usuario"><br>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha"><br>
+    <button type="button" onclick="efetuarLogin();">Enviar</button>
+    <button type="button" onclick="limparCampos();">Limpar campo</button>
+  </form>  
+<script>
+ 
+ function soma(){  
+let numero1 = parseFloat(document.getElementById('numero1').value);
+let numero2 = parseFloat(document.getElementById('numero2').value);
+
+alert(numero1 + numero2);
+}
+     function limparCampos(){
+            document.getElementById('usuario').value='';
+            document.getElementById('senha').value='';
+            document.getElementById('usuario').focus();
+        }
+
+
+  function efetuarLogin(){
+ let usuario = document.getElementById('usuario').value;
+ let senha = document.getElementById('senha').value;
+
+ if(document.getElementById('usuario').value == 'senac'&& document.getElementById('senha').value =='12345'){
+    window.location.href ="https://www.google.com";
+ }
+  }    
+  
+</script>
+ 
+
+
+    
+
+</body>
+</html>
